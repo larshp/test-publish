@@ -21,6 +21,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
+          draft: true
           files: Release.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
