@@ -20,7 +20,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          name: latest
+          tag_name: latest
           files: Release.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
