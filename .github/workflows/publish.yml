@@ -17,11 +17,12 @@ jobs:
         run: echo ${{ github.sha }} > Release.txt
       - name: Test
         run: cat Release.txt
-      - name: Release
-        uses: softprops/action-gh-release@v1
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
         with:
-          tag_name: latest
-          draft: true
-          files: Release.txt
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: Release.txt
+          asset_name: Release.txt
+          tag: latest
+          overwrite: true
+          body: "This is my release text"          
