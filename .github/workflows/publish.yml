@@ -24,5 +24,4 @@ jobs:
           file: Release.txt
           asset_name: Release.txt
           tag: latest
-          overwrite: true
-          body: "This is my release text"          
+          overwrite: true         
